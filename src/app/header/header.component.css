@@ -1,0 +1,55 @@
+.container-fluid{
+    height: 60px;
+    background-color: #F9F9F9;
+}
+
+.container-fluid .row{
+    height: 100%;
+}
+
+.container-fluid .row .col{
+   padding:0;
+   margin:0;
+}
+
+.container-fluid .row .col p{
+    color: #19647E;
+    margin: 20px 10px 20px 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+    text-align: right;
+    cursor:pointer;
+}
+
+.container-fluid .row .col p:hover{
+    color: #28AFB0;
+}
+
+.container-fluid .row .col .slash{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.container-fluid .row .navDer{
+    padding-right: 70px;
+}
+
+.container-fluid .row .navIzq{
+    padding-left: 70px;
+}
+
+.container-fluid .row .navDer p{
+    float: right ;
+}
+
+.container-fluid .row .navIzq p{
+    float: left ;   
+}
+
+.container-fluid .row .logo{
+    text-align: center;
+    padding-top: 10px;
+    font-family: 'Dosis', sans-serif;
+    font-size: 2em;
+    cursor: pointer;
+}
