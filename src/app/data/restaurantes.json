@@ -1,0 +1,39 @@
+{
+    "restaurantes":[{
+        "id": 1,
+        "name": "Celicioso",
+        "foodType": ["Cafe", "Saludable", "Pasteleria", "Vegano"],
+        "address": "Calle del Barquillo, 19"
+    },
+    {
+        "id": 2,
+        "name": "Piú di Prima",
+        "foodType": ["Italiano"],
+        "address": "Paseo Marqués de Zafra, 5"
+    },
+    {
+        "id": 3,
+        "name": "Larios Café",
+        "foodType": ["Mediterraneo", "Carne"],
+        "address": "Calle de Silva, 4"
+    },
+    {
+        "id": 4,
+        "name": "Esencia al Cuadrado",
+        "foodType": ["Vegetariano", "Vegano", "Fusion"],
+        "address": "Travesía Trujillos, 2"
+    },
+    {
+        "id": 5,
+        "name": "Mantra",
+        "foodType": ["Indio"],
+        "address": "Calle de Viriato, 47"
+    },
+    {
+        "id": 6,
+        "name": "Küche",
+        "foodType": ["Mediterraneo", "Carne"],
+        "address": "Calle de la Princesa, 18"
+    }]
+    
+}
