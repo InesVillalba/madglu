@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RestaurantsService } from '../restaurants.service';
 
 @Component({
   selector: 'app-novedades',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NovedadesComponent implements OnInit {
 
-  constructor() { }
+  restaurants: any[];
+  tag: boolean; 
+
+  constructor(private restaurantsService: RestaurantsService) { }
 
   ngOnInit() {
+    this.restaurantsService.getRestaurants().then((response)=>{
+      console.log(response.json());
+      this.restaurants = response.json();
+    })
   }
 
+  twoFoodTags(restaurant){
+    return restaurant.slice(0,2);
+  }
 }

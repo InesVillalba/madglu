@@ -1,6 +1,6 @@
 .container-fluid .row .heroe{
     height:650px;
-    background-image: url('../images/hero3.jpg');
+    background-image: url('/assets/images/hero3.jpg');
     background-size: cover;
 }
 

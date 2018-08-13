@@ -1,18 +1,26 @@
 <div class="container-fluid">
+
   <div class="row">
     <div class="col sectionTitle">
       <h3>NOVEDADES</h3>
     </div>
-    <div class="row">
-      <div class="col carrusel">
-        <div class="col-3 newRestaurant">
-          <img src="assets/images/hero1.jpg">
-          <div class="infoRestaurant">
-            <h4>NOMBRE DEL RESTAURANTE</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae dapibus velit. Ut pretium finibus tempor. Quisque vel mauris id mauris semper dignissim.</p>
-          </div>
+  </div>
+
+  <div class="row">
+    <div class="newRestaurantWrapper col-10">
+      <div class="col-3 newRestaurant col-md-offset-4" *ngFor="let rest of restaurants">
+        <img src="assets/images/hero1.jpg">
+        <div class="infoRestaurant">
+          <h4>{{rest.name}}</h4>
+          <p class="foodTags" *ngFor="let tag of twoFoodTags(rest.foodType)">
+            {{tag}}
+          </p>
+          <p>{{rest.address}}</p>
         </div>
       </div>
     </div>
   </div>
+
 </div>
+
+
