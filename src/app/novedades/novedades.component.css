@@ -1,58 +1,56 @@
 *{
-    box-sizing: content-box;
+    padding:0;
+
 }
 
-.container-fluid .row .sectionTitle{
+.sectionTitle{
     margin-top: 30px;
 }
 
-.container-fluid .row .sectionTitle h3{
+.sectionTitle h3{
     font-family: 'Dosis', sans-serif;
     text-align: center;
     margin:0;
 }
 
-.container-fluid .row .newRestaurantWrapper{
+.newRestaurantsWrapper{
     height: 300px;
-    margin: 30px auto;
-    padding:0;
-    overflow:hidden
+    margin: 30px auto;    
+    overflow:hidden    
 }
 
-.container-fluid .row .newRestaurantWrapper .newRestaurant{
-    height:300px;
-    background-color: #F9F9F9;
-    padding:0;
-    border-radius: 5px;
+.newRestaurantsWrapper .newRestaurant{
+    height:300px;    
     overflow: hidden;
     float: left;
 }
 
-.container-fluid .row .newRestaurantWrapper .newRestaurant img{
+.newRestaurantsWrapper .newRestaurant img{
     width:100%;
     height: 50%;
 }
 
-.container-fluid .row .newRestaurantWrapper .newRestaurant .infoRestaurant{
-   margin: 20px 15px;
+.newRestaurantsWrapper .newRestaurant .infoRestaurant{
+   padding: 20px 15px;
    text-align: center;
+   background-color: #F9F9F9;
 }
 
-.container-fluid .row .newRestaurantWrapper .newRestaurant .infoRestaurant h4{
+.newRestaurantsWrapper .newRestaurant .infoRestaurant h4{
     font-family: 'Open Sans', sans-serif;
     font-size: 1.1em;
     font-weight: bold;
     margin-bottom: 15px;
  }
 
- .container-fluid .row .newRestaurant .infoRestaurant p{
+ .newRestaurant .infoRestaurant p{
     font-family: 'Open Sans', sans-serif;
     font-size: 0.8em;
     margin: 10px 0;
  }
 
 
-.container-fluid .row .newRestaurant .infoRestaurant .foodTags{
+.newRestaurant .infoRestaurant .foodTags{
     padding: 5px;
     margin: 0 4px;
     background-color: #28AFB0;
@@ -61,4 +59,14 @@
     text-align: center;
     display:inline;
     border-radius: 3px;
+}
+
+div[class^="col-"] {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+  
+.row {
+    margin-left: -5px;
+    margin-right: -5px;
 }

@@ -19,8 +19,4 @@ export class NovedadesComponent implements OnInit {
       this.restaurants = response.json();
     })
   }
-
-  twoFoodTags(restaurant){
-    return restaurant.slice(0,2);
-  }
 }
