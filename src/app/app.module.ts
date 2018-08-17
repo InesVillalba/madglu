@@ -11,6 +11,8 @@ import { HomeComponent } from './home/home.component';
 import { appRoutes } from './app.routing';
 import { NovedadesComponent } from './novedades/novedades.component';
 import { DirectorioComponent } from './directorio/directorio.component';
+import { RestaurantesComponent } from './restaurantes/restaurantes.component';
+import { FiltrosRestaurantesComponent } from './filtros-restaurantes/filtros-restaurantes.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { DirectorioComponent } from './directorio/directorio.component';
     FooterComponent,
     HomeComponent,
     NovedadesComponent,
-    DirectorioComponent
+    DirectorioComponent,
+    RestaurantesComponent,
+    FiltrosRestaurantesComponent
   ],
   imports: [
     BrowserModule,
