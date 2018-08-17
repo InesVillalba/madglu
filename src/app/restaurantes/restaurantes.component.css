@@ -1,0 +1,69 @@
+*{
+    padding:0;
+}
+
+.restaurants{ 
+    overflow: hidden;
+    float: left;
+}
+
+.restaurants img{
+    width: 100%;
+    height: 40%;
+    margin: 10px 0;
+}
+
+.restaurants .infoRestaurant{
+   padding: 20px 15px;
+   text-align: center;
+   background-color: #F9F9F9;
+}
+
+.restaurants .infoRestaurant h4{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 7px;
+ }
+
+.restaurants .infoRestaurant p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.7em;
+    margin-top: 15px;
+    margin-bottom: 0;
+ }
+
+.restaurants .infoRestaurant .desRestaurant{
+    font-size: 0.9em;
+    margin-top: 0;
+    margin-bottom:15px;
+}
+
+ i{
+     width:20px;
+     height:20px;
+     font-size: 20px;
+
+    color: black;
+ }
+
+.restaurants .infoRestaurant .foodTags{
+    padding: 5px;
+    margin: 0 4px;
+    background-color: #28AFB0;
+    color:white;
+    font-size: 0.7em;
+    text-align: center;
+    display:inline;
+    border-radius: 3px;
+}
+
+div[class^="col-"] {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+  
+.row {
+    margin-left: -5px;
+    margin-right: -5px;
+}

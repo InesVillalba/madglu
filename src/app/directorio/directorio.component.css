@@ -1,0 +1,9 @@
+.directorio{
+    padding: 0 30px;
+}
+
+.col-3, .col-9{
+    padding:0;
+    margin:0;
+}
+
