@@ -1,6 +1,53 @@
-.filter{
-    background-color: royalblue;
-    height:300px;
-    width:100%;
-    margin: 10px 0;
+*{
+    padding: 0;
+    margin:0;
+    font-family: 'Open Sans', sans-serif;
 }
+
+.filter{
+    background-color: #F4F4F4;
+    margin: 10px 0;
+    padding: 20px;
+}
+
+.filter .foodTypeFilter, .filter .areaFilter{
+    margin-bottom: 20px;
+    font-size: 0.9em;
+}
+
+.filter .header{
+    width:100%;
+    height: 40px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #28AFB0;
+}
+
+.filter .filterIconFood{
+    width: 30px;
+    float:left;
+}
+
+.filter .filterIconDistrict{
+    width: 18px;
+    float:left;
+}
+
+.filter h5{
+    font-size: 1.1em;
+    font-weight: 800;
+    float:left;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.filter input[type=checkbox]{
+    margin: 10px 7px 10px 0;
+    -ms-transform: scale(1.15); /* IE */
+    -moz-transform: scale(1.15); /* FF */
+    -webkit-transform: scale(1.15); /* Safari y Chrome */
+    -o-transform: scale(1.15); /* Opera */
+}
+
+
+
+
