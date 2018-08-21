@@ -6,6 +6,8 @@
 .restaurants{ 
     float: left;
     margin-top: 10px;
+    padding-left:10px;
+    cursor: pointer;
 }
 
 .restaurants img{
@@ -15,8 +17,9 @@
 
 .restaurants .infoRestaurant{
    padding: 20px 15px;
+   height:60%;
    text-align: center;
-   background-color: #F9F9F9;
+   background-color: #F4F4F4;
 }
 
 .restaurants .infoRestaurant h4{
@@ -56,7 +59,7 @@
     border-radius: 3px;
 }
 
-div[class^="col-"] {
+/* div[class^="col-"] {
     padding-left: 5px;
     padding-right: 5px;
 }
@@ -64,4 +67,4 @@ div[class^="col-"] {
 .row {
     margin-left: -5px;
     margin-right: -5px;
-}
+} */
