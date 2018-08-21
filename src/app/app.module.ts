@@ -13,6 +13,7 @@ import { NovedadesComponent } from './novedades/novedades.component';
 import { DirectorioComponent } from './directorio/directorio.component';
 import { RestaurantesComponent } from './restaurantes/restaurantes.component';
 import { FiltrosRestaurantesComponent } from './filtros-restaurantes/filtros-restaurantes.component';
+import { DetalleRestauranteComponent } from './detalle-restaurante/detalle-restaurante.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FiltrosRestaurantesComponent } from './filtros-restaurantes/filtros-res
     NovedadesComponent,
     DirectorioComponent,
     RestaurantesComponent,
-    FiltrosRestaurantesComponent
+    FiltrosRestaurantesComponent,
+    DetalleRestauranteComponent
   ],
   imports: [
     BrowserModule,
