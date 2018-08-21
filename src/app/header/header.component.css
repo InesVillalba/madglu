@@ -1,55 +1,63 @@
 .container-fluid{
     height: 60px;
-    background-color: #F9F9F9;
+    background-color: #F4F4F4;
 }
 
-.container-fluid .row{
+.row{
     height: 100%;
 }
 
-.container-fluid .row .col{
+.col{
    padding:0;
    margin:0;
 }
 
-.container-fluid .row .col p{
+.col p{
     color: #19647E;
     margin: 20px 10px 20px 10px;
     font-family: 'Open Sans', sans-serif;
     font-size: 0.8em;
     text-align: right;
-    cursor:pointer;
 }
 
-.container-fluid .row .col p:hover{
+.navDer .entrar:hover, .navDer .registrarse:hover {
     color: #28AFB0;
 }
 
-.container-fluid .row .col .slash{
+.slash{
     margin-left: 0;
     margin-right: 0;
 }
 
-.container-fluid .row .navDer{
+.navDer{
     padding-right: 70px;
+    cursor: pointer;
 }
 
-.container-fluid .row .navIzq{
+.navIzq{
     padding-left: 70px;
+    cursor: pointer;
 }
 
-.container-fluid .row .navDer p{
+.navDer p{
     float: right ;
 }
 
-.container-fluid .row .navIzq p{
+.navIzq p{
     float: left ;   
 }
 
-.container-fluid .row .logo{
+.navIzq p:hover{
+    color: #28AFB0;   
+}
+
+.logo{
     text-align: center;
     padding-top: 10px;
     font-family: 'Dosis', sans-serif;
     font-size: 2em;
+}
+
+h1{
     cursor: pointer;
 }
