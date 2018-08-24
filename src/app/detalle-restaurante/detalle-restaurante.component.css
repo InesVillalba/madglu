@@ -4,13 +4,19 @@
 }
 
 .detalleRestaurante{
-    padding: 20px 80px;
+   max-width: 1024px;
+   margin: 20px auto;
 }
 
 .wrapper{
     background-color: #F4F4F4;
     border-radius: 3px;
 }
+
+.wrapper p{
+    margin: 0 100px;
+}
+
 
 .heroe{
     height: 200px;
@@ -19,10 +25,77 @@
     border-radius: 3px 3px 0 0;
 }
 
+.datosPrincipales{
+    font-family: 'Dosis', sans-serif;
+}
+
+.datosPrincipales h3{
+    text-align: center;
+}
+
+.datosPrincipales .logo{
+    width: 150px;
+    margin: 20px auto;
+}
+
 .datosPrincipales .logo img{
     width: 150px;
     height: 150px;
     border-radius: 7px;
-    
 }
 
+.rating{
+    width: 150px;
+    margin: 15px auto 0 auto;
+    text-align: center;
+    color: #EAA21C;
+}
+
+.rating i{
+    font-size: 1.2em;
+    padding: 2.5px;
+} 
+
+.descripcion p{
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 10px;
+}
+
+.carousel{
+    margin: 20px 100px;
+    min-height: 400px;
+    height: 450px !important;
+    overflow: hidden;
+}
+
+.carousel img{
+    width:100%;
+}
+
+ul li{
+    width: 50%;
+    border-radius: 0;
+}
+
+ul li a{
+    text-align: center;
+    height: 60px;
+    border-radius: 0;
+    background-color: #E2E2E2;
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 17px;
+    color: #1E2226;
+}
+
+ul li a:hover{
+    color: #28AFB0;
+}
+
+ul li .active{
+    background-color: #28AFB0;
+    color: white;  
+}
+
+ul li .active:hover{
+    color: white;  
+}
