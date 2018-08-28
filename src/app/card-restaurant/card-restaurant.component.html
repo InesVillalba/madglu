@@ -1,0 +1,8 @@
+<img src="assets/images/hero1.jpg">
+  <div class="infoRestaurant">
+    <h4>{{rest.name}}</h4>
+    <p class="foodTags" *ngFor="let tag of rest.tags.split(',').slice(0,2)">
+      {{tag}}
+    </p>
+    <p>{{rest.address}}</p>
+  </div>
