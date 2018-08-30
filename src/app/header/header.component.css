@@ -61,3 +61,41 @@
 h1{
     cursor: pointer;
 }
+
+.hamburguesa{
+    display: none;
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 768px){
+    .logo{
+        text-align: left;
+        float:left;
+        padding-left: 50px;
+    }
+
+    .navDer, .navIzq{
+        display: none;
+    }
+
+    .hamburguesa{
+        font-size: 1.9em;
+        display:block;
+        float: right;
+        padding-right: 50px;
+        padding-top: 13px;
+        cursor: pointer;
+    }
+
+}
+
+@media (max-width: 500px){
+    .logo{
+        padding-left: 30px;
+    }
+
+    .hamburguesa{
+        padding-right: 30px;
+    }
+}
