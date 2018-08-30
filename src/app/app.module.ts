@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule} from '@angular/router';
 import { HttpModule} from '@angular/http';
+import { AgmCoreModule } from '@agm/core';
 
 
 import { AppComponent } from './app.component';
@@ -14,6 +15,7 @@ import { DirectorioComponent } from './directorio/directorio.component';
 import { RestaurantesComponent } from './restaurantes/restaurantes.component';
 import { FiltrosRestaurantesComponent } from './filtros-restaurantes/filtros-restaurantes.component';
 import { DetalleRestauranteComponent } from './detalle-restaurante/detalle-restaurante.component';
+import { CardRestaurantComponent } from './card-restaurant/card-restaurant.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +27,16 @@ import { DetalleRestauranteComponent } from './detalle-restaurante/detalle-resta
     DirectorioComponent,
     RestaurantesComponent,
     FiltrosRestaurantesComponent,
-    DetalleRestauranteComponent
+    DetalleRestauranteComponent,
+    CardRestaurantComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    HttpModule
+    HttpModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBHRpx_V1CYOvo0HQGW6x-a5DCgkEhNEPw'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

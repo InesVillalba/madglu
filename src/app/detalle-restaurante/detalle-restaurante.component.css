@@ -17,7 +17,6 @@
     margin: 0 100px;
 }
 
-
 .heroe{
     height: 200px;
     background-image: url('https://images.unsplash.com/photo-1483908697361-99cdc9d6f13d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1fad2eacea7cafe2392a95aeb5f3861a&auto=format&fit=crop&w=2550&q=80');
@@ -63,8 +62,7 @@
 
 .carousel{
     margin: 20px 100px;
-    min-height: 400px;
-    height: 450px !important;
+    height: 350px !important;
     overflow: hidden;
 }
 
@@ -72,30 +70,194 @@
     width:100%;
 }
 
+ul{
+    margin: 0 100px;
+}
+
 ul li{
     width: 50%;
     border-radius: 0;
+    margin: 30px 0;
 }
 
 ul li a{
     text-align: center;
-    height: 60px;
+    height: 40px;
     border-radius: 0;
-    background-color: #E2E2E2;
     font-family: 'Open Sans', sans-serif;
-    padding-top: 17px;
-    color: #1E2226;
-}
-
-ul li a:hover{
-    color: #28AFB0;
+    border-bottom: 1px solid #E2E2E2;
+    color: rgb(156, 156, 156);
 }
 
 ul li .active{
-    background-color: #28AFB0;
-    color: white;  
+    font-weight: 800;
+    background-color: #F4F4F4;
+    color: #1E2226 ;  
+    border-bottom: 5px solid #28AFB0;
 }
 
-ul li .active:hover{
-    color: white;  
+#pills-infPractica, #pills-reviews{
+    margin: 0 100px;
+    font-family: 'Open Sans', sans-serif;
 }
+
+.informacion{
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.informacion div {
+    text-align: center;
+}
+
+.informacion h4{
+    padding: 10px;
+    font-size: 0.9em;
+    font-weight: 700;
+    background-color: #1E2226;
+    color: white;
+}
+
+.informacion h5{
+    padding: 10px;
+    font-size: 0.8em;
+    font-weight: 800;
+    background-color: #E2E2E2;
+}
+
+.informacion .zona{
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+}
+
+.informacion p{
+    padding: 10px;
+    margin: 0;
+    font-size: 0.8em;
+    background-color: white;
+}
+
+agm-map{
+    width: 100%;
+    height: 300px;
+    margin-top: 50px;
+}
+
+.review{
+    background-color: white;
+    padding: 35px;
+    border-bottom: 1px solid #E2E2E2;
+}
+
+.review .dataReview{
+    height: 70px;
+}
+
+.review .dataReview .fecha{
+    width: 200px;
+    text-align: right;
+    float: right;
+    margin: 0;
+    padding-top: 20px;
+    font-size: 0.8em;
+}
+
+.review .dataReview h5{
+    width: 200px;
+    float:left;
+    margin: 0;
+    padding-top: 20px;
+    padding-left: 10px;
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
+.review .dataReview img{
+    width: 70px;
+    height: 70px;
+    float:left;
+    border-radius: 50px;
+    background-color: #EAA21C;
+}
+
+.review .mainReview{
+    margin-top: 10px;
+}
+
+.review .mainReview h6{
+    font-family: 'Dosis', sans-serif;
+    font-weight: 400;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.review .mainReview p{
+    font-weight: 400;
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 768px){
+
+    .carousel{
+        margin: 15px 50px;
+        height: 300px !important;
+        min-height: 300px !important;
+    }
+
+    .wrapper .descripcion p, ul{
+        margin: 0 50px;
+    }
+
+    #pills-infPractica, #pills-reviews{
+        margin: 0 50px;
+    }
+
+}
+
+@media (max-width: 650px){
+
+    .carousel{
+        height: 230px !important;
+        min-height: 230px !important;
+    }
+}    
+
+
+@media (max-width: 500px){
+
+    .carousel{
+        margin: 15px 0;
+        width: 100%;
+        height: 170px !important;
+    }
+
+    #pills-infPractica, #pills-reviews{
+        margin: 0;
+    }
+
+    .wrapper .descripcion p{
+        margin: 0 35px;
+        margin-bottom: 10px;
+    }
+
+   ul{
+       margin: 0;
+       width: 100%;
+   }
+
+   ul li a{
+       font-size: 0.8em;
+   }
+
+    agm-map{
+        margin-top: 25px;
+        height: 300px;
+        width: 100%;
+    }
+
+}
+
+

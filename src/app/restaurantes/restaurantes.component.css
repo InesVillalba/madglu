@@ -5,66 +5,7 @@
 
 .restaurants{ 
     float: left;
-    margin-top: 10px;
-    padding-left:10px;
     cursor: pointer;
+    background-color: #F9F9F9;
+    border: 2px solid white;
 }
-
-.restaurants img{
-    width: 100%;
-    height: 40%;
-}
-
-.restaurants .infoRestaurant{
-   padding: 20px 15px;
-   height:60%;
-   text-align: center;
-   background-color: #F4F4F4;
-}
-
-.restaurants .infoRestaurant h4{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.1em;
-    font-weight: bold;
-    margin-bottom: 7px;
- }
-
-.restaurants .infoRestaurant p{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 0.7em;
-    margin-top: 15px;
-    margin-bottom: 0;
- }
-
-.restaurants .infoRestaurant .desRestaurant{
-    font-size: 0.9em;
-    margin-top: 0;
-    margin-bottom:15px;
-}
-
-.restaurants .infoRestaurant i{
-    width:20px;
-    font-size: 16px;
-    color: gray;
- }
-
-.restaurants .infoRestaurant .foodTags{
-    padding: 5px;
-    margin: 0 4px;
-    background-color: #28AFB0;
-    color:white;
-    font-size: 0.7em;
-    text-align: center;
-    display:inline;
-    border-radius: 3px;
-}
-
-/* div[class^="col-"] {
-    padding-left: 5px;
-    padding-right: 5px;
-}
-  
-.row {
-    margin-left: -5px;
-    margin-right: -5px;
-} */

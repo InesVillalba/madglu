@@ -7,5 +7,5 @@ export const appRoutes: Routes = [
     {path: '', component: HomeComponent, pathMatch: 'full'},
     {path: 'home', component: HomeComponent},
     {path: 'directorio', component: DirectorioComponent},
-    {path: 'restaurante', component: DetalleRestauranteComponent}
+    {path: 'restaurante/:id', component: DetalleRestauranteComponent}
 ]

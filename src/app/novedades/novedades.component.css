@@ -25,42 +25,6 @@
     float: left;
 }
 
-.newRestaurantsWrapper .newRestaurant img{
-    width:100%;
-    height: 50%;
-}
-
-.newRestaurantsWrapper .newRestaurant .infoRestaurant{
-   padding: 20px 15px;
-   text-align: center;
-   background-color: #F9F9F9;
-}
-
-.newRestaurantsWrapper .newRestaurant .infoRestaurant h4{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.1em;
-    font-weight: bold;
-    margin-bottom: 15px;
- }
-
- .newRestaurant .infoRestaurant p{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 0.8em;
-    margin: 10px 0;
- }
-
-
-.newRestaurant .infoRestaurant .foodTags{
-    padding: 5px;
-    margin: 0 4px;
-    background-color: #28AFB0;
-    color:white;
-    font-size: 0.7em;
-    text-align: center;
-    display:inline;
-    border-radius: 3px;
-}
-
 div[class^="col-"] {
     padding-left: 5px;
     padding-right: 5px;

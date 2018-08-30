@@ -1,15 +1,7 @@
 <div class="container">
   <div class="row">
-    <div class="col-3 restaurants" *ngFor="let rest of restaurants" (click)="goToPage('restaurante')">
-      <img src="assets/images/restaurant.jpg">
-      <div class="infoRestaurant">
-        <h4>{{rest.name}}</h4>
-        <p class="desRestaurant">Breve descripción del restaurante</p>
-        <p class="foodTags" *ngFor="let tag of rest.foodType.slice(0,2)">
-         {{tag}}
-        </p>
-        <p> <i class="fa fa-map-marker"></i>{{rest.address}}</p>
-      </div>
+    <div class="col-3 restaurants" *ngFor="let rest of restaurants" [routerLink]="['/restaurante', rest.id]">
+        <app-card-restaurant [cardRestaurant]="rest"></app-card-restaurant>
     </div>
   </div>
 </div>

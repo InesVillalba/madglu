@@ -10,7 +10,7 @@
             <div class="logo">
               <img src="https://pbs.twimg.com/profile_images/986619258766585856/tVwJXy6I_400x400.jpg">
             </div>
-            <h3>Nombre del restaurante</h3>
+            <h3>{{restaurant?.name}}</h3>
             <div class="rating">
               <i class="fa fa-star"></i>
               <i class="fa fa-star"></i>
@@ -23,8 +23,7 @@
           <img src="" class="rating">
 
           <div class="descripcion">
-            <p>Descripción un poco más detallada del restaurante. Aquí puedes venderte un pocquito y mostrar lo maravillosamente gluten-free que eres. No sé qué tan largo será este texto, pero espero que lo suficiente para que la maquetación me quede reshulona. Por podir que no quede, oye. Lo ideal sería que tuviera un mínimo de dos párrafos, para hacer relleno y que la página no quede muy vacía. No es que tenga horror vacui, pero si no quedará todo muy blanco.</p>
-            <p>Descripción un poco más detallada del restaurante. Aquí puedes venderte un pocquito y mostrar lo maravillosamente gluten-free que eres. No sé qué tan largo será este texto, pero espero que lo suficiente para que la maquetación me quede reshulona.</p>
+            <p>{{restaurant?.description}}</p>
           </div>
 
           <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -51,19 +50,44 @@
 
           <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
             <li class="nav-item infPractica">
-              <a class="nav-link active infPracticaLink" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">INFORMACIÓN PRÁCTICA</a>
+              <a class="nav-link active infPracticaLink" id="pills-infPractica-tab" data-toggle="pill" href="#pills-infPractica" role="tab" aria-controls="pills-infPractica" aria-selected="true">INFORMACIÓN PRÁCTICA</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">COMENTARIOS</a>
+            <li class="nav-item reviews">
+              <a class="nav-link" id="pills-reviews-tab" data-toggle="pill" href="#pills-reviews" role="tab" aria-controls="pills-reviews" aria-selected="false">COMENTARIOS</a>
             </li>
           </ul>
           <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">...</div>
-            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
-          </div>
-    
-          <iframe class="mapsnext" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.393470788528!2d-3.716205984937563!3d40.422285463226096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42287019637667%3A0x43c73c98786f8be0!2sPlaza+de+Espa%C3%B1a%2C+11%2C+28008+Madrid!5e0!3m2!1ses!2ses!4v1534865680710" width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <div class="tab-pane fade show active tablaInfPractica" id="pills-infPractica" role="tabpanel" aria-labelledby="pills-infPractica-tab">
+            
+              <div class="container-fluid">
+                <div class="row informacion">
+                  <div class="col-lg-12 col-sm-12"><h4>INFORMACIÓN PRÁCTICA</h4></div>
+                  <div class="col-lg-4 col-sm-12"><h5>TIPO DE COMIDA</h5><p>{{restaurant?.tags}}</p></div>
+                  <div class="col-lg-4 col-sm-12 zona"><h5>ZONA</h5><p>{{restaurant?.area}}</p></div>
+                  <div class="col-lg-4 col-sm-12"><h5>DIRECCIÓN</h5><p>{{restaurant?.address}}</p></div>
+                </div>
+              </div>
 
+              <agm-map [latitude]="lat" [longitude]="lng">
+                <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+              </agm-map>
+            </div>
+
+            <div class="tab-pane fade" id="pills-reviews" role="tabpanel" aria-labelledby="pills-reviews-tab">
+              <div class="review">
+                <div class="dataReview">
+                  <img src="../assets/images/avatar.png" class="avatarMin">
+                  <h5>Amy. L</h5>
+                  <p class="fecha">27/08/2018</p>
+                </div>
+                <div class="mainReview">
+                  <h6>Asunto del comentario</h6>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores repellat explicabo inventore at minus, quia molestias voluptates! Cumque nemo fugit, maiores perferendis iste alias quidem assumenda atque voluptas magni laboriosam.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
     </div>

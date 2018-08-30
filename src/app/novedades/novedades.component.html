@@ -8,16 +8,9 @@
 
 <div class="row">
     <div class="newRestaurantsWrapper col-10">
-      <div class="col-3 newRestaurant" *ngFor="let rest of restaurants">
-        <img src="assets/images/hero1.jpg">
-        <div class="infoRestaurant">
-          <h4>{{rest.name}}</h4>
-          <p class="foodTags" *ngFor="let tag of rest.foodType.slice(0,2)">
-            {{tag}}
-          </p>
-          <p>{{rest.address}}</p>
+        <div class="col-3 newRestaurant" *ngFor="let rest of restaurants">
+            <app-card-restaurant [cardRestaurant]="rest"></app-card-restaurant>
         </div>
-      </div>
     </div>
   </div>
 
