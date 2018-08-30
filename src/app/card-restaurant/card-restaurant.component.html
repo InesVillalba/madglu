@@ -1,7 +1,7 @@
 <img src="assets/images/hero1.jpg">
   <div class="infoRestaurant">
     <h4>{{cardRestaurant?.name}}</h4>
-    <p class="desRestaurant">{{cardRestaurant?.description}}</p>
+    <!-- <p class="desRestaurant">{{cardRestaurant?.description}}</p> -->
     <p class="foodTags" *ngFor="let tag of cardRestaurant?.tags.split(',').slice(0,2)">
       {{tag}}
     </p>

@@ -2,12 +2,32 @@
     padding: 0 30px;
 }
 
-.col-3, .col-9{
-    padding:0;
-    margin:0;
+.col-lg-9, .filtersWrapper{
+    padding:0 !important;
+    margin:0 !important;
 }
 
 .filters{
     margin-right: 10px;
 }
 
+/* MEDIA QUERY */
+
+@media (max-width: 1200px){
+    .directorio{
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 992px){
+    
+}
+
+@media (max-width: 768px){
+    .directorio{
+        padding: 0;
+    }
+    .filtersWrapper{
+        display:none;
+    }
+}
