@@ -18,4 +18,15 @@ export class RestaurantsService {
     let url = `http://localhost:3000/api/restaurants/${idRestaurant}`;
     return this.http.get(url).toPromise();
   }
+
+  getCategories(){    
+    let url = 'http://localhost:3000/api/restaurants/categories';
+    return this.http.get(url).toPromise();
+  }
+
+  getAreas(){
+    let url = 'http://localhost:3000/api/restaurants/areas';
+    return this.http.get(url).toPromise();
+  }
+  
 }

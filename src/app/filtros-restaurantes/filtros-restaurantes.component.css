@@ -18,7 +18,7 @@
     width:100%;
     height: 40px;
     margin-bottom: 10px;
-    border-bottom: 1px solid #28AFB0;
+    border-bottom: 1px solid #19647E;
 }
 
 .filter .filterIconFood{
@@ -48,5 +48,29 @@
 }
 
 
+/* MEDIA QUERY */
+
+@media (max-width: 900px){
+
+    .filter{
+        padding: 10px;
+    }
+
+    .filter .foodTypeFilter, .filter .areaFilter{
+        font-size: 0.8em;
+    }
+
+    .filter .filterIconFood{
+        width: 27px;
+    }
+
+    .filter .filterIconDistrict{
+        width: 15px;
+    }
+
+    .filter .header{
+        height: 35px;
+    }
 
 
+}
