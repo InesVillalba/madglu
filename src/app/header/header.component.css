@@ -66,6 +66,48 @@ h1{
     display: none;
 }
 
+
+/* MODAL */
+
+.modal-title{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    margin: 0 auto;
+    padding-left: 30px;
+}
+
+.modal-header{
+    border-bottom: 1px solid #F9F9F9;
+}
+
+.modal-footer{
+    border-top: none;
+}
+
+button.close{
+    margin-left: 0 !important;
+}
+
+form{
+    width: 100%;
+}
+
+input.form-control{
+    width: 100%;
+    margin-top: 10px;
+}
+
+button.btn{
+    background-color: #28AFB0;
+    border: 0;
+}
+
+button.btn:hover{
+    background-color: rgb(32, 141, 141);
+}
+
+
+
 /* MEDIA QUERY */
 
 @media (max-width: 768px){
