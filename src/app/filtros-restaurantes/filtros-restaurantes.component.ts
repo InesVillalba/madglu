@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { RestaurantsService } from '../restaurants.service';
+import * as $ from 'jquery';
+import { NgRedux } from '@angular-redux/store';
+import { IAppState } from '../store';
+import { ADD_NEW_FILTER, REMOVE_FILTER } from '../actions';
+
 
 @Component({
   selector: 'app-filtros-restaurantes',
@@ -8,10 +13,10 @@ import { RestaurantsService } from '../restaurants.service';
 })
 export class FiltrosRestaurantesComponent implements OnInit {
 
-  constructor(private restaurantsService: RestaurantsService) { }
+  categories: any[];
+  areas: any[];
 
-    categories: any[];
-    areas: any[];
+  constructor(private restaurantsService: RestaurantsService, private ngRedux: NgRedux<IAppState>) { }
 
   ngOnInit() {
     this.restaurantsService.getCategories().then((response)=>{
@@ -23,6 +28,23 @@ export class FiltrosRestaurantesComponent implements OnInit {
       console.log(response.json());
       this.areas = response.json();
     })
+
+    
   }
+
+  activate($event){
+    if($event.target.checked){
+      this.ngRedux.dispatch({
+        type: ADD_NEW_FILTER,
+        data: parseInt($event.target.value)
+      })
+    }else{
+      this.ngRedux.dispatch({
+        type: REMOVE_FILTER,
+        data: parseInt($event.target.value)
+      })
+    }
+  }
+
 
 }

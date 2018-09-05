@@ -4,8 +4,8 @@
             <img src="../assets/images/icons/icon-food-type.png" class="filterIconFood">
             <h5>Tipos de comida</h5>
         </div>
-        <div *ngFor="let cat of categories" >
-            <input type="checkbox" [name]="cat.value" [value]="cat.value"> {{cat.name}} <br>
+        <div *ngFor="let cat of categories">
+            <input type="checkbox" class="categoriasCheck" [name]="cat.value" [value]="cat.value" (change)="activate($event)" > {{cat.name}} <br>
         </div>  
     </div>
     <div class="areaFilter">

@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { RouterModule} from '@angular/router';
 import { HttpModule} from '@angular/http';
 import { AgmCoreModule } from '@agm/core';
+import { NgRedux, NgReduxModule, DevToolsExtension } from '@angular-redux/store';
+import { IAppState, rootReducer, INITIAL_STATE } from './store';
 
 
 import { AppComponent } from './app.component';
@@ -36,9 +38,20 @@ import { CardRestaurantComponent } from './card-restaurant/card-restaurant.compo
     HttpModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBHRpx_V1CYOvo0HQGW6x-a5DCgkEhNEPw'
-    })
+    }),
+    NgReduxModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+
+export class AppModule {
+  constructor(ngRedux: NgRedux<IAppState>, devTools: DevToolsExtension){
+    // El segundo parámetro es el estado inicial de nuestra store
+    // El tercero son middlewares
+    var enhancers = isDevMode() ? [devTools.enhancer()] : [];
+
+    ngRedux.configureStore(rootReducer, INITIAL_STATE, [], enhancers)
+  }
+ }
