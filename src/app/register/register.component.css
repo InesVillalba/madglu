@@ -1,0 +1,49 @@
+.fondo{
+    height: 100vh;
+    min-height: 500px;
+    background-color: white;
+}
+
+h4{
+    font-family: 'Dosis', sans-serif;
+    text-align: center;
+}
+
+.registro{
+    margin: 5% auto;
+}
+
+.registro form input{
+    width: 100%;
+    height: 40px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+    margin-top: 20px;
+    color: #19647E;;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #28AFB0;
+    padding-left: 10px;
+}
+
+.registro form .btn-submit{
+    margin-top: 40px;
+    margin-bottom: 0;
+    display: block;
+    border: none;
+    border-radius: 5px;
+    background-color: #28AFB0;
+    color: white;
+}
+
+.registro form .btn-submit:hover{
+    background-color: rgb(32, 141, 141);
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #19647E;
+}
+
+*:focus {
+    outline: none;
+}
