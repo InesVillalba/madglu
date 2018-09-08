@@ -19,6 +19,7 @@ import { FiltrosRestaurantesComponent } from './filtros-restaurantes/filtros-res
 import { DetalleRestauranteComponent } from './detalle-restaurante/detalle-restaurante.component';
 import { CardRestaurantComponent } from './card-restaurant/card-restaurant.component';
 import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { RegisterComponent } from './register/register.component';
     FiltrosRestaurantesComponent,
     DetalleRestauranteComponent,
     CardRestaurantComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
