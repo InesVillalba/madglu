@@ -23,13 +23,21 @@ export class RestaurantesComponent implements OnInit {
     })
 
     this.ngRedux.subscribe(() => {
-      this.restaurantsService.postCheckedFilters(this.ngRedux.getState().filters)
-      .then((response) =>{
-        console.log(response);
-        this.restaurants = response.json();
+      this.restaurantsService.postCheckedFilters(this.ngRedux.getState().filters).then((response) =>{
+        console.log(response.json().length)
+        
+        if(response.json().length > 0){
+          this.restaurants = response.json();
+        }else{
+          this.restaurantsService.getRestaurants().then((response)=>{
+            this.restaurants = response.json();
+            //console.log('HOLIS')
+          })
+        } 
       })
-      console.log(this.ngRedux.getState().filters)
     })
+
+
   }
 
   goToPage(path){

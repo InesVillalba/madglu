@@ -5,7 +5,7 @@ import { HttpModule} from '@angular/http';
 import { AgmCoreModule } from '@agm/core';
 import { NgRedux, NgReduxModule, DevToolsExtension } from '@angular-redux/store';
 import { IAppState, rootReducer, INITIAL_STATE } from './store';
-
+import { ReactiveFormsModule } from '@angular/forms'
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -18,6 +18,8 @@ import { RestaurantesComponent } from './restaurantes/restaurantes.component';
 import { FiltrosRestaurantesComponent } from './filtros-restaurantes/filtros-restaurantes.component';
 import { DetalleRestauranteComponent } from './detalle-restaurante/detalle-restaurante.component';
 import { CardRestaurantComponent } from './card-restaurant/card-restaurant.component';
+import { RegisterComponent } from './register/register.component';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { CardRestaurantComponent } from './card-restaurant/card-restaurant.compo
     RestaurantesComponent,
     FiltrosRestaurantesComponent,
     DetalleRestauranteComponent,
-    CardRestaurantComponent
+    CardRestaurantComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +43,7 @@ import { CardRestaurantComponent } from './card-restaurant/card-restaurant.compo
       apiKey: 'AIzaSyBHRpx_V1CYOvo0HQGW6x-a5DCgkEhNEPw'
     }),
     NgReduxModule,
+    ReactiveFormsModule
     
   ],
   providers: [],
@@ -52,6 +56,14 @@ export class AppModule {
     // El tercero son middlewares
     var enhancers = isDevMode() ? [devTools.enhancer()] : [];
 
+    let estado_inicial = null
+    if (localStorage.getItem('redux_data')) {
+      estado_inicial = JSON.parse(localStorage.getItem('redux_data'))
+    } else {
+      estado_inicial = INITIAL_STATE
+    }
+
     ngRedux.configureStore(rootReducer, INITIAL_STATE, [], enhancers)
   }
  }
+

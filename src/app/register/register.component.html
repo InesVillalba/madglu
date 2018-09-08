@@ -1,0 +1,15 @@
+<div class="container-fluid fondo">
+  <div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12">
+      <form
+      [formGroup]="registro"
+      (ngSubmit)="createNewUser(registro.value)">
+        <input type="text" name="username" placeholder="usuario" formControlName="username">
+        <input type="text" name="mail" placeholder="email" formControlName="mail">
+        <input type="password" name="password" placeholder="contraseña (min. 6 caracteres)" formControlName="password">
+        <input type="password" name="password2" placeholder="introduce de nuevo la contraseña" formControlName="password2">
+        <input type="submit" value="¡Regístrame!" [disabled]="!registro.valid">
+      </form>
+    </div>
+  </div>
+</div>
