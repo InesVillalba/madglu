@@ -20,6 +20,7 @@ import { DetalleRestauranteComponent } from './detalle-restaurante/detalle-resta
 import { CardRestaurantComponent } from './card-restaurant/card-restaurant.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import { PerfilComponent } from './perfil/perfil.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { LoginComponent } from './login/login.component';
     DetalleRestauranteComponent,
     CardRestaurantComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,

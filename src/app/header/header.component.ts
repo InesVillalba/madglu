@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '../../../node_modules/@angular/router';
+import { NgRedux } from '../../../node_modules/@angular-redux/store';
+import { IAppState } from '../store';
 
 @Component({
   selector: 'app-header',
@@ -8,9 +10,12 @@ import { Router } from '../../../node_modules/@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  usuario: any;
+
+  constructor(private router: Router, public ngRedux: NgRedux<IAppState>) { }
 
   ngOnInit() {
+    this.usuario = this.ngRedux.getState().usuario; 
   }
 
   goToPage(path){

@@ -1,3 +1,17 @@
-<p>
-  login works!
-</p>
+<div class="container-fluid fondo">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12 login">
+        <h4>¡Accede a tu cuenta!</h4>
+        <form
+        [formGroup]="login"
+        (ngSubmit)="loginUser(login.value)">
+          <input type="text" name="username" placeholder="Usuario" formControlName="username">
+          <input type="password" name="password" placeholder="Contraseña" formControlName="password">
+          <div class="register">
+              <p>¿No tienes cuenta? <span (click)="goToPage('registro')">¡Regístrate!</span></p>
+          </div>
+          <input type="submit" value="¡Entrar!" class="btn-submit">
+        </form>
+      </div>
+    </div>
+  </div>

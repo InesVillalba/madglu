@@ -1,12 +1,14 @@
-import { ADD_NEW_FILTER, REMOVE_FILTER } from "./actions";
+import { ADD_NEW_FILTER, REMOVE_FILTER, SUCCESS_USER } from "./actions";
 import {tassign} from 'tassign';
 
 export interface IAppState{
     filters: any[];
+    usuario: null;
 }
 
 export const INITIAL_STATE: IAppState = {
-    filters: []
+    filters: [],
+    usuario: null
 } 
 
 export function rootReducer(state, action) {
@@ -23,6 +25,9 @@ export function rootReducer(state, action) {
                 console.log(arr)
             }
             return tassign(state, {filters: arr});
+        }
+        case SUCCESS_USER: {
+            return tassign(state, {usuario: action.data});            
         }
     }
     return state

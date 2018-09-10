@@ -35,9 +35,10 @@
     cursor: pointer;
 }
 
-.navDer p{
+.navDer .login, .navDer .logout{
     float: right ;
 }
+
 
 .navIzq p{
     float: left ;   
@@ -62,71 +63,14 @@ h1{
     display: none;
 }
 
-
-/* MODAL */
-
-.modal-title{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.2em;
-    margin: 0 auto;
-    padding-left: 30px;
-}
-
-.modal-header{
-    border-bottom: 1px solid #F9F9F9;
-}
-
-.modal-body{
-    display: block;
-    color: #19647E;
-}
-
-.modal-footer{
-    border-top: none;
-    padding-top: 0;
-}
-
-button.close{
-    margin-left: 0 !important;
-}
-
-form{
-    width: 100%;
-}
-
-input.form-control{
-    width: 100%;
+.panelUsuario{
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    background-color: #EAA21C;
+    float:right;
     margin-top: 10px;
-    font-family: 'Open Sans', sans-serif !important;
-    font-size: 0.8em;
 }
-
-.register p{
-    width: 100%;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 0.8em;
-    margin-bottom: 0 !important;
-}
-
-.register span{
-    font-weight: 800;
-    cursor: pointer;
-}
-
-button.btn{
-    background-color: #28AFB0;
-    border: 0;
-}
-
-button.btn:hover{
-    background-color: rgb(32, 141, 141);
-}
-
-::-webkit-input-placeholder { /* WebKit browsers */
-    color: #19647E;
-}
-
-
 
 /* MEDIA QUERY */
 
