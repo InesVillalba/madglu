@@ -29,9 +29,9 @@ export class RestaurantsService {
     return this.http.get(url).toPromise();
   }
 
-  postCheckedFilters(pFilters){
+  postCheckedFilters(pFoodType, pAreas){
     let url = 'http://localhost:3000/api/restaurants/filtered';
-    return this.http.post(url, {filters: pFilters}).toPromise();
+    return this.http.post(url, {foodType: pFoodType, areas: pAreas}).toPromise();
   }
   
 }

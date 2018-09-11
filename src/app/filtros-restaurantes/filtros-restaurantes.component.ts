@@ -3,7 +3,7 @@ import { RestaurantsService } from '../restaurants.service';
 import * as $ from 'jquery';
 import { NgRedux } from '@angular-redux/store';
 import { IAppState } from '../store';
-import { ADD_NEW_FILTER, REMOVE_FILTER } from '../actions';
+import { ADD_NEW_FOODTYPE, REMOVE_FOODTYPE, ADD_NEW_AREA, REMOVE_AREA } from '../actions';
 
 
 @Component({
@@ -28,20 +28,34 @@ export class FiltrosRestaurantesComponent implements OnInit {
       console.log(response.json());
       this.areas = response.json();
     })
-
     
   }
 
-  activate($event){
+  activateFoodTypes($event){
     if($event.target.checked){
       this.ngRedux.dispatch({
-        type: ADD_NEW_FILTER,
+        type: ADD_NEW_FOODTYPE,
         data: parseInt($event.target.value)
       })
     }else{
       this.ngRedux.dispatch({
-        type: REMOVE_FILTER,
+        type: REMOVE_FOODTYPE,
         data: parseInt($event.target.value)
+      })
+    }
+  }
+
+  activateAreas($event){
+    //console.log($event.target.value) --- ENTRA
+    if($event.target.checked){
+      this.ngRedux.dispatch({
+        type: ADD_NEW_AREA,
+        data: $event.target.value
+      })
+    }else{
+      this.ngRedux.dispatch({
+        type: REMOVE_AREA,
+        data: $event.target.value
       })
     }
   }

@@ -1,30 +1,43 @@
-import { ADD_NEW_FILTER, REMOVE_FILTER, SUCCESS_USER } from "./actions";
+import { SUCCESS_USER, ADD_NEW_FOODTYPE, REMOVE_FOODTYPE, ADD_NEW_AREA, REMOVE_AREA } from "./actions";
 import {tassign} from 'tassign';
 
 export interface IAppState{
-    filters: any[];
+    foodTypes: any[];
+    areas: any[]
     usuario: null;
 }
 
 export const INITIAL_STATE: IAppState = {
-    filters: [],
+    foodTypes: [],
+    areas: [],
     usuario: null
 } 
 
 export function rootReducer(state, action) {
     switch(action.type){
-        case ADD_NEW_FILTER: {
-            let arr = state.filters;
+        case ADD_NEW_FOODTYPE: {
+            let arr = state.foodTypes;
             arr.push(action.data);
-            return tassign(state, {filters: arr});
+            return tassign(state, {foodTypes: arr});
         }
-        case REMOVE_FILTER: {
-            let arr = state.filters;
+        case REMOVE_FOODTYPE: {
+            let arr = state.foodTypes;
             if(arr.indexOf(action.data) !== -1){
                 arr.splice(arr.indexOf(action.data), 1)
-                console.log(arr)
             }
-            return tassign(state, {filters: arr});
+            return tassign(state, {foodTypes: arr});
+        }
+        case ADD_NEW_AREA: {
+            let arr = state.areas;
+            arr.push(action.data);
+            return tassign(state, {areas: arr});
+        }
+        case REMOVE_AREA: {
+            let arr = state.areas;
+            if(arr.indexOf(action.data) !== -1){
+                arr.splice(arr.indexOf(action.data), 1)
+            }
+            return tassign(state, {areas: arr});
         }
         case SUCCESS_USER: {
             return tassign(state, {usuario: action.data});            
