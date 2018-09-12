@@ -33,5 +33,11 @@ export class RestaurantsService {
     let url = 'http://localhost:3000/api/restaurants/filtered';
     return this.http.post(url, {foodType: pFoodType, areas: pAreas}).toPromise();
   }
+
+  getFavoriteRestaurants(pUserId){
+    let url = `http://localhost:3000/api/restaurants/favorites/${pUserId}`;
+    return this.http.get(url).toPromise();
+  }
+
   
 }

@@ -19,5 +19,10 @@ export class UsersService {
     let url = 'http://localhost:3000/api/users/login';
     return this.http.post(url, userInfo).toPromise();
   }
+
+  guardarEnFavoritos(pRestId, pUserId){
+    let url = 'http://localhost:3000/api/users/favorites';
+    return this.http.post(url, {restId: pRestId, userId: pUserId}).toPromise();
+  }
   
 }

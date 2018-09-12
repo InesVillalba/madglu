@@ -49,15 +49,11 @@
 }
 
 .logo{
-    text-align: center;
-    padding-top: 10px;
-    font-family: 'Dosis', sans-serif;
-    font-size: 2em;
+    margin-top: 17px;
+    height: 27px;
+    width: auto;
 }
 
-h1{
-    cursor: pointer;
-}
 
 .hamburguesa{
     display: none;

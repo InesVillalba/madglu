@@ -1,0 +1,145 @@
+.perfil{
+    max-width: 1100px;
+    min-height: 500px;
+    margin: 15px auto;
+    background-color: #F4F4F4;
+    border-radius: 5px;
+    overflow: scroll;
+    padding-bottom: 100px;
+}
+
+.main{
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    margin: 30px auto;
+}
+
+.main .avatar{
+    width: 120px;
+    height: 120px;
+    border-radius: 300px;
+    border: 5px solid white;
+    background-color: #EAA21C;
+    margin: 0 auto;
+    display: block;
+}
+
+.main h2{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.4em
+}
+
+.datosPersonales, .favoritos{
+    width: 90%;
+    background-color: white;
+    margin: 0 auto;
+    padding: 25px;
+}
+
+.datosPersonales .usuario, .datosPersonales .password, .datosPersonales .glutenRange{
+    width: 50%;
+    margin: 20px auto 0 auto;
+}
+
+.datosPersonales .usuario input, .datosPersonales .password input {
+    width: 100%;
+    height: 40px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;;
+    display: block;
+    border: 1px solid #28AFB0;
+    padding-left: 10px;
+    border-radius: 2px;
+    color: #19647E;
+}
+
+h4{
+    width: 70%;
+    margin: 0 auto;
+    font-family: 'Dosis', sans-serif;
+    text-align: center;
+}
+
+h6{
+    font-weight: 400;
+    font-size: 0.9em;
+    color: #19647E;
+}
+
+.fa{
+    font-size: 20px;
+    float: right;
+    padding-top: 5px;
+    color: lightslategray;
+    cursor: pointer;
+}
+
+.fa:hover {
+    color: rgb(184, 193, 202);
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #19647E;
+}
+
+*:focus {
+    outline: none;
+}
+
+/* SLIDER */
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 20px;
+    background: #F4F4F4;
+    outline: none;
+    opacity: 0.8;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #28AFB0;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #28AFB0;
+    cursor: pointer;
+}
+
+.restaurantesFavoritos{
+    margin-top: 20px;
+    height: 250px;
+    background-color: #F9F9F9;
+    padding: 0;
+    border: 2px solid white;
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 768px){
+    .datosPersonales .usuario, .datosPersonales .password, .datosPersonales .glutenRange{
+        width: 80%;
+    }
+}
+
+@media (max-width: 400px){
+    .datosPersonales, .favoritos{
+        width: 100%;
+    }
+
+    .datosPersonales .usuario, .datosPersonales .password, .datosPersonales .glutenRange{
+        width: 95%;
+    }
+}

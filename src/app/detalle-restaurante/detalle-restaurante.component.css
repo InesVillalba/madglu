@@ -28,6 +28,18 @@
     font-family: 'Dosis', sans-serif;
 }
 
+.datosPrincipales .favorito{
+    float: right;
+    padding-right: 20px;
+    font-size: 23px;
+    color: rgb(255, 162, 175);
+    cursor: pointer;
+}
+
+.datosPrincipales .favorito:hover{
+    color: rgb(250, 139, 154)
+}
+
 .datosPrincipales h3{
     text-align: center;
 }

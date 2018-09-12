@@ -6,7 +6,7 @@
         <p>ABOUT</p>
       </div>
 
-      <h1 (click)="goToPage('home')" class="logo col">MADGLU</h1>
+      <img src="assets/images/madglu-logo.png" alt="logo madglu" class="logo" (click)="goToPage('home')">
 
       <div class="navDer col" *ngIf="!ngRedux.getState().usuario">
         <p (click)="goToPage('login')" class="login">ENTRAR</p>

@@ -7,6 +7,7 @@
           <div class="heroe"></div>
           
           <div class="datosPrincipales">
+            <i class="fa fa-heart favorito" (click)="guardarFavorito(restaurant?.id)" *ngIf="ngRedux.getState().usuario"></i>
             <div class="logo">
               <img src="https://pbs.twimg.com/profile_images/986619258766585856/tVwJXy6I_400x400.jpg">
             </div>
