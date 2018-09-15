@@ -19,9 +19,12 @@
 
 .heroe{
     height: 200px;
-    background-image: url('https://images.unsplash.com/photo-1483908697361-99cdc9d6f13d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1fad2eacea7cafe2392a95aeb5f3861a&auto=format&fit=crop&w=2550&q=80');
-    background-size: cover;
     border-radius: 3px 3px 0 0;
+    overflow: hidden;
+}
+
+.heroe img{
+    background-size: cover;
 }
 
 .datosPrincipales{

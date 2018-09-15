@@ -29,5 +29,10 @@ export class UsersService {
     let url = 'http://localhost:3000/api/users/delfav';
     return this.http.post(url, {restId: pRestId, userId: pUserId}).toPromise();
   }
+
+  eliminarCuenta(pUserId){
+    let url = 'http://localhost:3000/api/users/deluser';
+    return this.http.post(url, {userId: pUserId}).toPromise();
+  }
   
 }

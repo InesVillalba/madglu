@@ -79,6 +79,14 @@ h6{
     color: rgb(184, 193, 202);
 }
 
+.borrarCuenta{
+    width: 100px;
+    height: 20px;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+}
+
 ::-webkit-input-placeholder { /* WebKit browsers */
     color: #19647E;
 }

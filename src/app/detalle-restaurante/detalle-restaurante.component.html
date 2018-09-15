@@ -4,7 +4,9 @@
       <div class="col">
         <div class="wrapper">
           
-          <div class="heroe"></div>
+          <div class="heroe">
+            <img src="{{restaurant?.image}}">
+          </div>
           
           <div class="datosPrincipales">
              
@@ -14,7 +16,7 @@
           </div>
             
             <div class="logo">
-              <img src="https://pbs.twimg.com/profile_images/986619258766585856/tVwJXy6I_400x400.jpg">
+                <img src="{{restaurant?.logo}}">
             </div>
             <h3>{{restaurant?.name}}</h3>
             <div class="rating">
@@ -31,18 +33,12 @@
           <div class="descripcion">
             <p>{{restaurant?.description}}</p>
           </div>
-
+                    
           <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="d-block" src="../assets/images/celicioso1.jpg" alt="First slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block" src="../assets/images/celicioso2.jpg" alt="Second slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block" src="../assets/images/celicioso3.jpg" alt="Third slide">
-              </div>
+            <div class="carousel-inner">              
+              <div  *ngFor="let imagen of restaurant?.imgs.split(';'); let i = index" [ngClass] = "i === 0 ? 'carousel-item active': 'carousel-item'">
+                <img class="d-block" [src]="imagen">
+              </div>              
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
