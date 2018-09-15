@@ -24,5 +24,10 @@ export class UsersService {
     let url = 'http://localhost:3000/api/users/favorites';
     return this.http.post(url, {restId: pRestId, userId: pUserId}).toPromise();
   }
+
+  eliminarDeFavoritos(pRestId, pUserId){
+    let url = 'http://localhost:3000/api/users/delfav';
+    return this.http.post(url, {restId: pRestId, userId: pUserId}).toPromise();
+  }
   
 }

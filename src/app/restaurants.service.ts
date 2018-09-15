@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Http } from '../../node_modules/@angular/http';
+import { Http, RequestOptions } from '../../node_modules/@angular/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -14,8 +15,8 @@ export class RestaurantsService {
     return this.http.get(url).toPromise();
   }
 
-  getRestaurant(idRestaurant){
-    let url = `http://localhost:3000/api/restaurants/${idRestaurant}`;
+  getRestaurant(idUser, idRestaurant){
+    let url = `http://localhost:3000/api/restaurants/${idRestaurant},${idUser}`;    
     return this.http.get(url).toPromise();
   }
 
