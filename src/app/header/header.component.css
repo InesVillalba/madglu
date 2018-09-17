@@ -20,28 +20,33 @@
     text-align: right;
 }
 
+.nav{
+    display: none;
+}
+
 .navDer .entrar:hover, .navDer .registrarse:hover {
     color: #28AFB0;
 }
 
-
 .navDer{
     padding-right: 70px;
-    cursor: pointer;
 }
 
 .navIzq{
     padding-left: 70px;
-    cursor: pointer;
 }
 
 .navDer .login, .navDer .logout{
     float: right ;
 }
 
-
 .navIzq p{
-    float: left ;   
+    float: left ;  
+    cursor: pointer; 
+}
+
+.navDer p{
+   cursor: pointer;
 }
 
 .navIzq p:hover{
@@ -52,6 +57,7 @@
     margin-top: 17px;
     height: 27px;
     width: auto;
+    cursor: pointer;
 }
 
 
@@ -71,22 +77,39 @@
 /* MEDIA QUERY */
 
 @media (max-width: 768px){
-    .logo{
-        text-align: left;
-        float:left;
-        padding-left: 50px;
+
+    .container-fluid{
+        height: 140px;
+        background-color: #F4F4F4;
     }
 
-    .navDer, .navIzq{
+    .logo{
+        padding-left: 70px;
+        margin-bottom: 17px;
+    }
+
+    .navIzq{
         display: none;
     }
 
-    .hamburguesa{
-        font-size: 1.9em;
-        display:block;
+    .navDer{
         float: right;
-        padding-right: 50px;
-        padding-top: 13px;
+    }
+
+    .nav{
+        display: block;
+        width: 100%;
+        background-color: #F4F4F4;
+    }
+
+    .nav li{
+        height:40px;
+        border-top: 1px solid #19647E;
+        font-family: 'Open Sans', sans-serif;
+        text-align: center;
+        color: #19647E;
+        font-size: 0.9em;
+        padding-top: 7px;
         cursor: pointer;
     }
 

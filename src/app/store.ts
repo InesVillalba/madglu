@@ -1,4 +1,4 @@
-import { SUCCESS_USER, ADD_NEW_FOODTYPE, REMOVE_FOODTYPE, ADD_NEW_AREA, REMOVE_AREA } from "./actions";
+import { SUCCESS_USER, ADD_NEW_FOODTYPE, REMOVE_FOODTYPE, ADD_NEW_AREA, REMOVE_AREA, LOGOUT_USER } from "./actions";
 import {tassign} from 'tassign';
 
 export interface IAppState{
@@ -15,7 +15,7 @@ export const INITIAL_STATE: IAppState = {
 
 export function rootReducer(state, action) {
     switch(action.type){
-        case ADD_NEW_FOODTYPE: {
+        case ADD_NEW_FOODTYPE: { 
             let arr = state.foodTypes;
             arr.push(action.data);
             return tassign(state, {foodTypes: arr});
@@ -41,6 +41,9 @@ export function rootReducer(state, action) {
         }
         case SUCCESS_USER: {
             return tassign(state, {usuario: action.data});            
+        }
+        case LOGOUT_USER: {
+            return tassign(state, {usuario: action.data});
         }
     }
     return state

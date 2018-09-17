@@ -5,7 +5,7 @@
 
 .detalleRestaurante{
    max-width: 1024px;
-   margin: 0 auto;
+   margin: 10px auto;
 }
 
 .wrapper{
@@ -24,7 +24,7 @@
 }
 
 .heroe img{
-    background-size: cover;
+    width: 100%;
 }
 
 .datosPrincipales{
@@ -36,6 +36,14 @@
     padding-right: 20px;
     font-size: 23px;
     color: rgb(255, 162, 175);
+    cursor: pointer;
+}
+
+.datosPrincipales .nofavorito{
+    float: right;
+    padding-right: 20px;
+    font-size: 23px;
+    color: rgb(134, 134, 134);
     cursor: pointer;
 }
 

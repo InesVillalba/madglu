@@ -4,7 +4,7 @@ import { RestaurantsService } from '../restaurants.service';
 import { NgRedux } from '../../../node_modules/@angular-redux/store';
 import { IAppState } from '../store';
 import { UsersService } from '../users.service';
-import { $ } from '../../../node_modules/protractor';
+
 
 @Component({
   selector: 'app-detalle-restaurante',
@@ -35,7 +35,7 @@ export class DetalleRestauranteComponent implements OnInit {
     if(this.ngRedux.getState().usuario !== null){
       let user = this.ngRedux.getState().usuario ? this.ngRedux.getState().usuario : {id: -1}
       this.usersService.guardarEnFavoritos(restId, user.id).then((response) =>{
-        console.log(response.json());
+        this.restaurant.isFav = 1
       })
     }
   }
@@ -44,33 +44,33 @@ export class DetalleRestauranteComponent implements OnInit {
     if(this.ngRedux.getState().usuario !== null){
       let user = this.ngRedux.getState().usuario ? this.ngRedux.getState().usuario : {id: -1}
       this.usersService.eliminarDeFavoritos(restId, user.id).then((response) =>{
-        console.log(response.json());
+        this.restaurant.isFav = 0
       })
     }
   }
 
-  changeFavState(elto){
-    /*
-    var favs = $(".favorito"); // 0 --> guardar; 1 --> eliminar
+//   changeFavState(elto){
+//     /*
+//     var favs = $(".favorito"); // 0 --> guardar; 1 --> eliminar
 
-    for(var i=0; i<favs.length; i++){
-      if($(favs[i]).attr('class').includes('ocultaBoton')){
-        // añadir clase buena
-        if(i === 0){ // añadimos la clase del corazon relleno
-          console.log("añado corazon relleno");
-          $(favs[i]).attr("class", "fa fa-heart favorito");
-        }else{ // añadimos la clase del corazon vacio
-          console.log("añado corazon vacio");
-          $(favs[i]).attr("class", "far fa-heart favorito");
-        }
-      }else{
-        // poner clase ocultaBoton
-        console.log("oculto boton");
-        $(favs[i]).attr("class", "ocultaBoton favorito");
-      }
-    }
-*/
+//     for(var i=0; i<favs.length; i++){
+//       if($(favs[i]).attr('class').includes('ocultaBoton')){
+//         // añadir clase buena
+//         if(i === 0){ // añadimos la clase del corazon relleno
+//           console.log("añado corazon relleno");
+//           $(favs[i]).attr("class", "fa fa-heart favorito");
+//         }else{ // añadimos la clase del corazon vacio
+//           console.log("añado corazon vacio");
+//           $(favs[i]).attr("class", "far fa-heart favorito");
+//         }
+//       }else{
+//         // poner clase ocultaBoton
+//         console.log("oculto boton");
+//         $(favs[i]).attr("class", "ocultaBoton favorito");
+//       }
+//     }
+// */
     
-  }
+
 
 }

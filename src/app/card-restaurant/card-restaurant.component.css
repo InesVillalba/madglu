@@ -48,3 +48,10 @@ img{
     color: gray;
 }
 
+/* MEDIA QUERY */
+
+@media (max-width:500px){
+    img{
+        height: 55%;
+    }
+}

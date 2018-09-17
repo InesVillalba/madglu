@@ -7,17 +7,20 @@
       </div>
 
       <img src="assets/images/madglu-logo.png" alt="logo madglu" class="logo" (click)="goToPage('home')">
+      
+      <ul class="nav">
+        <li (click)="goToPage('directorio')">DIRECTORIO</li>
+        <li>ABOUT</li>
+      </ul>
 
       <div class="navDer col" *ngIf="!ngRedux.getState().usuario">
         <p (click)="goToPage('login')" class="login">ENTRAR</p>
       </div>
 
       <div class="navDer col" *ngIf="ngRedux.getState().usuario">
-          <p class="logout">LOGOUT</p>
-          <img src="assets/images/avatar.png"  class="panelUsuario">
+          <p class="logout" (click)="logoutUser()">LOGOUT</p>
+          <img src="assets/images/avatar.png"  class="panelUsuario" (click)="goToPage('perfil')" >
         </div>
-
-      <i class="fa fa-bars hamburguesa"></i>
 
   </div>
 </div>

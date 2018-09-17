@@ -11,8 +11,8 @@
           <div class="datosPrincipales">
              
           <div *ngIf="ngRedux.getState().usuario">
-              <i [ngClass]="restaurant?.isFav === 0 ? 'far fa-heart favorito' : 'favorito ocultaBoton'" (click)="guardarFavorito(restaurant?.id); changeFavState()"></i>
-              <i [ngClass] = "restaurant?.isFav === 1 ? 'fa fa-heart favorito': 'favorito ocultaBoton'" (click)="eliminarFavorito(restaurant?.id); changeFavState()"></i>
+              <i [ngClass]="restaurant?.isFav === 0 ? 'fa fa-heart nofavorito' : 'favorito ocultaBoton'" (click)="guardarFavorito(restaurant?.id)"></i>
+              <i [ngClass] = "restaurant?.isFav === 1 ? 'fa fa-heart favorito': 'favorito ocultaBoton'" (click)="eliminarFavorito(restaurant?.id)"></i>
           </div>
             
             <div class="logo">
