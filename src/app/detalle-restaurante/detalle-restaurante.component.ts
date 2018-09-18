@@ -4,6 +4,8 @@ import { RestaurantsService } from '../restaurants.service';
 import { NgRedux } from '../../../node_modules/@angular-redux/store';
 import { IAppState } from '../store';
 import { UsersService } from '../users.service';
+import { FormGroup, Validators, FormControl } from '../../../node_modules/@angular/forms';
+import { ResponseContentType } from '../../../node_modules/@angular/http';
 
 
 @Component({
@@ -16,7 +18,9 @@ export class DetalleRestauranteComponent implements OnInit {
   lat: number = 51.678418;
   lng: number = 7.809007;
 
+  comentario: FormGroup;
   restaurant: any;
+  reviews:any[];
 
   constructor(private activatedRoute: ActivatedRoute, private restaurantsService: RestaurantsService, private usersService: UsersService, private ngRedux: NgRedux<IAppState>) {}
 
@@ -28,7 +32,21 @@ export class DetalleRestauranteComponent implements OnInit {
       this.restaurantsService.getRestaurant(user.id, params.id).then((response) => {
         this.restaurant = response.json();
       })
-    })    
+    })  
+    
+    this.comentario = new FormGroup({
+
+      title: new FormControl('', Validators.required),
+      review: new FormControl('', Validators.required)
+
+    })
+
+    this.activatedRoute.params.subscribe((params) => {
+      // Utilizamos params.id para recuperar los datos del restaurante correspondiente
+      this.restaurantsService.getReviews(params.id).then((response) => {
+        this.reviews = response.json();
+      })
+    })
   }
 
   guardarFavorito(restId){
@@ -49,28 +67,18 @@ export class DetalleRestauranteComponent implements OnInit {
     }
   }
 
-//   changeFavState(elto){
-//     /*
-//     var favs = $(".favorito"); // 0 --> guardar; 1 --> eliminar
 
-//     for(var i=0; i<favs.length; i++){
-//       if($(favs[i]).attr('class').includes('ocultaBoton')){
-//         // añadir clase buena
-//         if(i === 0){ // añadimos la clase del corazon relleno
-//           console.log("añado corazon relleno");
-//           $(favs[i]).attr("class", "fa fa-heart favorito");
-//         }else{ // añadimos la clase del corazon vacio
-//           console.log("añado corazon vacio");
-//           $(favs[i]).attr("class", "far fa-heart favorito");
-//         }
-//       }else{
-//         // poner clase ocultaBoton
-//         console.log("oculto boton");
-//         $(favs[i]).attr("class", "ocultaBoton favorito");
-//       }
-//     }
-// */
-    
+  newReview(reviewInfo){    
+    if(this.ngRedux.getState().usuario !== null){      
+      let user = this.ngRedux.getState().usuario ? this.ngRedux.getState().usuario : {id: -1}       
+      this.restaurantsService.addReview(user.id, reviewInfo.title, reviewInfo.review).then((response) => {
+        this.reviews.push(response.json());
+        console.log(response.json());
+      })
+    }
+  }
+
+
 
 
 }

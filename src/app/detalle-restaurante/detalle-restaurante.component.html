@@ -58,7 +58,9 @@
               <a class="nav-link" id="pills-reviews-tab" data-toggle="pill" href="#pills-reviews" role="tab" aria-controls="pills-reviews" aria-selected="false">COMENTARIOS</a>
             </li>
           </ul>
+
           <div class="tab-content" id="pills-tabContent">
+
             <div class="tab-pane fade show active tablaInfPractica" id="pills-infPractica" role="tabpanel" aria-labelledby="pills-infPractica-tab">
             
               <div class="container-fluid">
@@ -70,21 +72,33 @@
                 </div>
               </div>
 
-              <agm-map [latitude]="lat" [longitude]="lng">
+              <!-- <agm-map [latitude]="lat" [longitude]="lng">
                 <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-              </agm-map>
+              </agm-map> -->
             </div>
 
             <div class="tab-pane fade" id="pills-reviews" role="tabpanel" aria-labelledby="pills-reviews-tab">
-              <div class="review">
+
+              <div class="newReview" *ngIf="ngRedux.getState().usuario">
+                <h4>NUEVO COMENTARIO</h4>
+                <form
+                [formGroup]="comentario"
+                (ngSubmit)="newReview(comentario.value)">
+                  <input type="text" class="asunto" placeholder="Asunto" formControlName="title">
+                  <input type="textarea" class="mainText" placeholder="Escribe tu comentario..." rows="200" cols="50" formControlName="review">
+                  <input type="submit" value="Enviar" class="btnEnviar">
+                </form>
+              </div>
+
+              <div class="review" *ngFor="let review of reviews">
                 <div class="dataReview">
                   <img src="../assets/images/avatar.png" class="avatarMin">
-                  <h5>Amy. L</h5>
-                  <p class="fecha">27/08/2018</p>
+                  <h5>{{review?.username}}</h5>
+                  <p class="fecha">{{review?.review_date.substring(0,10)}}</p>
                 </div>
                 <div class="mainReview">
-                  <h6>Asunto del comentario</h6>
-                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores repellat explicabo inventore at minus, quia molestias voluptates! Cumque nemo fugit, maiores perferendis iste alias quidem assumenda atque voluptas magni laboriosam.</p>
+                  <h6>{{review?.title}}</h6>
+                  <p>{{review?.review}}</p>
                 </div>
               </div>
             </div>

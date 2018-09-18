@@ -40,5 +40,15 @@ export class RestaurantsService {
     return this.http.get(url).toPromise();
   }
 
+  addReview(pUserId, pTitle, pReview){
+    console.log("USER = "+pUserId+" TITLE: "+pTitle+"REVIEW:  "+pReview);
+    let url = 'http://localhost:3000/api/restaurants/addcomentario';
+    return this.http.post(url, {id_user: pUserId, title: pTitle, review: pReview}).toPromise();
+  }
+
+  getReviews(idRestaurant){
+    let url = `http://localhost:3000/api/restaurants/comentarios/${idRestaurant}`;        
+    return this.http.get(url).toPromise();
+  }
   
 }

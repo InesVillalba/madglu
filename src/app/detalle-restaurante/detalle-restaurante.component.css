@@ -1,6 +1,7 @@
 *{
     padding:0;
     margin:0;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .detalleRestaurante{
@@ -11,6 +12,7 @@
 .wrapper{
     background-color: #F4F4F4;
     border-radius: 3px;
+    padding-bottom: 30px;
 }
 
 .wrapper p{
@@ -53,6 +55,7 @@
 
 .datosPrincipales h3{
     text-align: center;
+    font-family: 'Dosis', sans-serif;
 }
 
 .datosPrincipales .logo{
@@ -79,7 +82,6 @@
 } 
 
 .descripcion p{
-    font-family: 'Open Sans', sans-serif;
     margin-bottom: 10px;
 }
 
@@ -107,7 +109,6 @@ ul li a{
     text-align: center;
     height: 40px;
     border-radius: 0;
-    font-family: 'Open Sans', sans-serif;
     border-bottom: 1px solid #E2E2E2;
     color: rgb(156, 156, 156);
 }
@@ -121,8 +122,8 @@ ul li .active{
 
 #pills-infPractica, #pills-reviews{
     margin: 0 100px;
-    font-family: 'Open Sans', sans-serif;
 }
+
 
 .informacion{
     border-radius: 10px;
@@ -218,6 +219,55 @@ agm-map{
     font-weight: 400;
     margin: 0;
     font-size: 0.9em;
+}
+
+.newReview .mainText, .newReview .asunto{
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+    border: none;
+    background-color: white;
+    margin-bottom: 5px;
+} 
+
+.newReview .mainText{
+    height: 150px;
+    padding: 12px;
+    border-bottom: 1px solid #E2E2E2;
+    resize: none;
+    vertical-align:top;
+}
+
+.newReview .asunto{
+    width: 100%;
+    height: 40px;
+    padding-left: 12px;
+}
+
+.newReview h4{
+    font-size: 1.2em;
+    font-family: 'Dosis', sans-serif;
+    margin-bottom: 15px;
+}
+
+.btnEnviar{
+    height: 40px;
+    width: 50%;
+    background-color: #28AFB0;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.btnEnviar:hover{
+    background-color: rgb(32, 141, 141);
+}
+
+::placeholder{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em; 
 }
 
 /* MEDIA QUERY */

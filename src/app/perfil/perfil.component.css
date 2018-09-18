@@ -30,7 +30,7 @@
     font-size: 1.4em
 }
 
-.datosPersonales, .favoritos{
+.datosPersonales, .favoritos, .borrarCuenta{
     width: 90%;
     background-color: white;
     margin: 0 auto;
@@ -79,17 +79,22 @@ h6{
     color: rgb(184, 193, 202);
 }
 
-.borrarCuenta{
-    width: 100px;
-    height: 20px;
-    background-color: red;
-    color: white;
-    border-radius: 5px;
-}
 
 ::-webkit-input-placeholder { /* WebKit browsers */
     color: #19647E;
 }
+
+.btnBorrarCuenta{
+    width: 200px;
+    height: 40px;
+    background-color: rgb(224, 82, 57);
+    border-radius: 5px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
 
 *:focus {
     outline: none;
