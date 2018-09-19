@@ -32,6 +32,11 @@ export class DetalleRestauranteComponent implements OnInit {
       this.restaurantsService.getRestaurant(user.id, params.id).then((response) => {
         this.restaurant = response.json();
       })
+
+      this.restaurantsService.getReviews(params.id).then((response) => {
+        this.reviews = response.json();
+        console.log(this.reviews)
+      })
     })  
     
     this.comentario = new FormGroup({
@@ -41,12 +46,7 @@ export class DetalleRestauranteComponent implements OnInit {
 
     })
 
-    this.activatedRoute.params.subscribe((params) => {
-      // Utilizamos params.id para recuperar los datos del restaurante correspondiente
-      this.restaurantsService.getReviews(params.id).then((response) => {
-        this.reviews = response.json();
-      })
-    })
+    
   }
 
   guardarFavorito(restId){
@@ -72,8 +72,13 @@ export class DetalleRestauranteComponent implements OnInit {
     if(this.ngRedux.getState().usuario !== null){      
       let user = this.ngRedux.getState().usuario ? this.ngRedux.getState().usuario : {id: -1}       
       this.restaurantsService.addReview(user.id, reviewInfo.title, reviewInfo.review).then((response) => {
-        this.reviews.push(response.json());
-        console.log(response.json());
+        this.activatedRoute.params.subscribe((params) => {
+          // Utilizamos params.id para recuperar los datos del restaurante correspondiente
+          this.restaurantsService.getReviews(params.id).then((response) => {
+            this.reviews = response.json();
+            console.log(this.reviews)
+          })
+        })
       })
     }
   }

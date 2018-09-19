@@ -67,7 +67,7 @@ export class AppModule {
       estado_inicial = INITIAL_STATE
     }
 
-    ngRedux.configureStore(rootReducer, INITIAL_STATE, [], enhancers)
+    ngRedux.configureStore(rootReducer, estado_inicial, [], enhancers)
   }
  }
 
