@@ -1,7 +1,6 @@
 *{
     padding:0;
     margin:0;
-    font-family: 'Open Sans', sans-serif;
 }
 
 .detalleRestaurante{
@@ -83,6 +82,7 @@
 
 .descripcion p{
     margin-bottom: 10px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .carousel{
@@ -111,6 +111,7 @@ ul li a{
     border-radius: 0;
     border-bottom: 1px solid #E2E2E2;
     color: rgb(156, 156, 156);
+    font-family: 'Open Sans', sans-serif;
 }
 
 ul li .active{
@@ -128,6 +129,7 @@ ul li .active{
 .informacion{
     border-radius: 10px;
     margin-bottom: 50px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .informacion div {
