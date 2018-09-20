@@ -1,0 +1,23 @@
+.container-fluid .row .heroe{
+    height:650px;
+    background-image: url('/assets/images/hero3.jpg');
+    background-size: cover;
+}
+
+.container-fluid .row .heroe .heroeText{
+    margin:300px auto;
+    padding:0;
+}
+
+.container-fluid .row .heroe .heroeText h2{
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 600;
+    margin:0;
+}
+
+.container-fluid .row .heroe .heroeText .bold{
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 800;
+}

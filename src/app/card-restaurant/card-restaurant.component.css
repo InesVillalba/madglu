@@ -1,0 +1,57 @@
+*{
+    padding:0;
+}
+
+img{
+    width:100%;
+    height:40%;
+}
+
+.infoRestaurant{
+   padding: 20px 15px 0px 15px;
+   text-align: center;
+   background-color: #F9F9F9;
+}
+
+.infoRestaurant h4{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 15px;
+ }
+
+.infoRestaurant p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+    margin: 10px 0;
+ }
+
+.infoRestaurant .foodTags{
+    padding: 5px;
+    margin: 0 4px;
+    background-color: #28AFB0;
+    color:white;
+    font-size: 0.7em;
+    text-align: center;
+    display:inline;
+    border-radius: 3px;
+}
+
+.infoRestaurant i{
+    font-size: 15px;
+    width: 20px;
+    color:gray;
+}
+
+.infoRestaurant .address{
+    font-size: 0.7em;
+    color: gray;
+}
+
+/* MEDIA QUERY */
+
+@media (max-width:500px){
+    img{
+        height: 55%;
+    }
+}

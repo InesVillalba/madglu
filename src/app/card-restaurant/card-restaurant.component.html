@@ -1,0 +1,9 @@
+<img src={{cardRestaurant?.mainImage}}>
+  <div class="infoRestaurant">
+    <h4>{{cardRestaurant?.name}}</h4>
+    <!-- <p class="desRestaurant">{{cardRestaurant?.description}}</p> -->
+    <p class="foodTags" *ngFor="let tag of cardRestaurant?.tags.split(',').slice(0,2)">
+      {{tag}}
+    </p>
+    <p class="address"><i class="fa fa-map-marker"></i>{{cardRestaurant?.address}}</p>
+  </div>

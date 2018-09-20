@@ -1,0 +1,126 @@
+.container-fluid{
+    height: 60px;
+    background-color: #F4F4F4;
+}
+
+.row{
+    height: 100%;
+}
+
+.col{
+   padding:0;
+   margin:0;
+}
+
+.col p{
+    color: #19647E;
+    margin: 20px 10px 20px 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+    text-align: right;
+}
+
+.nav{
+    display: none;
+}
+
+.navDer .entrar:hover, .navDer .registrarse:hover {
+    color: #28AFB0;
+}
+
+.navDer{
+    padding-right: 70px;
+}
+
+.navIzq{
+    padding-left: 70px;
+}
+
+.navDer .login, .navDer .logout{
+    float: right ;
+}
+
+.navIzq p{
+    float: left ;  
+    cursor: pointer; 
+}
+
+.navDer p{
+   cursor: pointer;
+}
+
+.navIzq p:hover{
+    color: #28AFB0;   
+}
+
+.logo{
+    margin-top: 17px;
+    height: 27px;
+    width: auto;
+    cursor: pointer;
+}
+
+
+.hamburguesa{
+    display: none;
+}
+
+.panelUsuario{
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    background-color: #EAA21C;
+    float:right;
+    margin-top: 10px;
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 768px){
+
+    .container-fluid{
+        height: 140px;
+        background-color: #F4F4F4;
+    }
+
+    .logo{
+        padding-left: 70px;
+        margin-bottom: 17px;
+    }
+
+    .navIzq{
+        display: none;
+    }
+
+    .navDer{
+        float: right;
+    }
+
+    .nav{
+        display: block;
+        width: 100%;
+        background-color: #F4F4F4;
+    }
+
+    .nav li{
+        height:40px;
+        border-top: 1px solid #19647E;
+        font-family: 'Open Sans', sans-serif;
+        text-align: center;
+        color: #19647E;
+        font-size: 0.9em;
+        padding-top: 7px;
+        cursor: pointer;
+    }
+
+}
+
+@media (max-width: 500px){
+    .logo{
+        padding-left: 30px;
+    }
+
+    .hamburguesa{
+        padding-right: 30px;
+    }
+}

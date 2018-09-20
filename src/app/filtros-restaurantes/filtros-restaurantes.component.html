@@ -1,0 +1,20 @@
+<div class="col-12 filter">
+    <div class="foodTypeFilter">
+        <div class="header">
+            <img src="../assets/images/icons/icon-food-type.png" class="filterIconFood">
+            <h5>Tipos de comida</h5>
+        </div>
+        <div *ngFor="let cat of categories">
+            <input type="checkbox" class="categoriasCheck" [name]="cat.value" [value]="cat.value" (change)="activateFoodTypes($event)" > {{cat.name}} <br>
+        </div>  
+    </div>
+    <div class="areaFilter">
+        <div class="header">
+            <img src="../assets/images/icons/icon-district.png" class="filterIconDistrict">
+            <h5>Zonas</h5>
+        </div>
+        <div *ngFor="let area of areas" >
+            <input type="checkbox" [name]="area.area" [value]="area.area" (change)="activateAreas($event)"> {{area.area}} <br>
+        </div>
+    </div>
+</div>

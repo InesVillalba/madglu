@@ -1,0 +1,44 @@
+.footer{
+    width: 100%;
+}
+
+footer{
+    background-color: #1E2226;
+    color: white;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    padding: 25px 0;
+}
+
+footer .contactoYTerminos{
+    margin-bottom: 15px;
+    font-size: 0.9em;
+   
+}
+
+footer .contactoYTerminos p{
+    display:inline;
+    margin: 0 3px;
+    cursor:pointer;
+}
+
+footer .contactoYTerminos #contacto:hover, footer .contactoYTerminos #terminos:hover{
+    color: #28AFB0;
+}
+
+/* footer .socialMedia{
+    text-align: center;
+}
+
+footer .socialMedia i{
+    font-size: 28px;
+    opacity: 0.7;
+    margin: 15px 5px 10px 5px;
+} */
+
+footer .copyright{
+    font-size: 0.8em;
+    opacity: 0.7;
+    text-align: center;
+    margin: 0;
+}

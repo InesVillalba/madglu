@@ -1,0 +1,41 @@
+<div class="perfil">
+    <div class="main">
+        <img src="assets/images/avatar.png" alt="avatar del usuario" class="avatar">
+        <h2>¡Hola, {{usuario?.username}}!</h2>
+    </div>
+
+    <div class="datosPersonales">
+        <h4>Datos personales</h4>
+        <div class="usuario">
+            <h6>Usuario</h6>
+            <input type="text" [value]="usuario?.username" [placeholder]="usuario?.username" readonly> 
+        </div>
+        <div class="password">
+            <h6>Contraseña</h6>
+            <input type="password" [value]="usuario?.pswd" [placeholder]="usuario?.pswd" readonly>
+        </div>
+        <div class="glutenRange">
+            <h6>Nivel de intolerancia al gluten</h6>
+            <input type="range" min="1" max="100" value="50" class="slider" readonly>
+        </div>
+    </div>
+
+    <div class="favoritos">
+        <i class="fa fa-edit"></i>
+        <h4>Favoritos</h4>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="restaurantesFavoritos col-lg-3 col-md-4 col-sm-6 col-xs-12" *ngFor= "let rest of favRestaurants">
+                    <app-card-restaurant [cardRestaurant]="rest"></app-card-restaurant>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="borrarCuenta">
+        <button (click)="eliminarCuenta()" class="btnBorrarCuenta">Borrar cuenta</button>
+    </div>
+
+</div>
+
+
